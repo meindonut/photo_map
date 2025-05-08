@@ -4,11 +4,14 @@ photo_map is a a simple console based app to show geotags of photos on a map.
 
 ![Screenshot of the example map.](example_map_screenshot.jpg)
 
-### How it works:
+## Use it:
 - start the exe file
 - copy one ore more folder into console
 - optional: create an excel file (see example) to show more information on the map
 - open map.html
+
+
+## Change it:
 
 ### Technically:
 - uses exifread to get geotags
@@ -17,7 +20,7 @@ photo_map is a a simple console based app to show geotags of photos on a map.
 
 Coded in vsode/windows.
 
-### install required modules in venv
+### Install required modules in venv
 
 `python -m venv .venv`
 
@@ -27,7 +30,7 @@ Coded in vsode/windows.
 
 `pip install -r requirements.txt`
 
-### build app
+### Build app
 
 `Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force # when problems with admin rights`
 
