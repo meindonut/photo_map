@@ -3,3 +3,4 @@ map.html
 /build
 *.spec
 /dist/photo_map
+dist/example_locations.xlsx
