@@ -22,4 +22,4 @@ pip install -r requirements.txt
 PS commands for dist:
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force # when problems with admin rights
 .venv/Scripts/activate.ps1 # if not already activated
-pyinstaller --clean --onefile --name photo_map main.py
+pyinstaller --clean --onefile --add-data "legend.html:." --add-data "custom_marker_cluster.css:." --name photo_map main.py

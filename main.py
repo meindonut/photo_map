@@ -1,4 +1,5 @@
 import os
+import sys
 import exifread
 import folium
 from datetime import datetime
@@ -41,6 +42,15 @@ def dms_to_decimal(dms: str):
             longitude = decimal
     
     return latitude, longitude
+
+def get_import_path(file_name: str):
+    if getattr(sys, 'frozen', False):
+        base_dir = sys._MEIPASS  # PyInstaller sets this for bundled apps
+    else:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    path = os.path.join(base_dir, file_name)
+    return os.path.normpath(path)
 
 def getExcelMarker(file_name: str):
     try:
@@ -230,12 +240,12 @@ def show_on_map(geotags_dates: list[tuple[float,float,datetime]], photo_paths: l
             folium.Marker(location=[lat, lon],popup=folium.Popup(text), tooltip=title, icon=custom_icon).add_to(fg)
     
     # Add legend as horizontal color bar
-    with open('legend.html', 'r') as file: 
+    with open(get_import_path('legend.html'), 'r') as file: 
         legend_html = file.read()
 
     map.get_root().html.add_child(folium.Element(legend_html))
 
-    map.get_root().header.add_child(folium.CssLink('custom_marker_cluster.css'))
+    map.get_root().header.add_child(folium.CssLink(get_import_path('custom_marker_cluster.css')))
     
     # add layer control after everything is added
     folium.LayerControl().add_to(map)
