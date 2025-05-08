@@ -2,6 +2,8 @@
 
 photo_map is a a simple console based app to show the geotags of photos on a map.
 
+![Screenshot of the example map.](example_map_screenshot.jpg)
+
 ### How it works:
 - start the exe file
 - type or copy one ore more folder into console
