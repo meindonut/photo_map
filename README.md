@@ -5,7 +5,8 @@ photo_map is a a simple console based app to show geotags of photos on a map.
 ![Screenshot of the example map.](example_map_screenshot.jpg)
 
 ## Use it:
-- start the exe file
+- get [latest release](https://github.com/meindonut/photo_map/releases/latest)
+- open *.exe
 - copy one ore more folder into console
 - optional: create an excel file (see example) to show more information on the map
 - open map.html
