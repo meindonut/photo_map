@@ -1,4 +1,4 @@
-# photo map
+# photo_map
 
 photo_map is a a simple console based app to show geotags of photos on a map.
 
